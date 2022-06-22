@@ -1,6 +1,6 @@
 export function Intro() {
   return (
-    <article className="border-b-2 border-zinc-300 mb-20">
+    <section className="border-b-2 border-zinc-300 mb-20">
       <h2 id="intro" className="lg:text-5xl text-4xl font-bold">What are Hooks in React anyway?</h2>
       <ul className="mt-10">
         <li><strong className="text-orange-500">Hooks</strong> let you use state and other React features without writing a class. </li>
@@ -29,6 +29,6 @@ export function Intro() {
       <h3 id="intro" className="lg:text-2xl text-xl font-bold mt-6">Hooks cannot be conditional</h3>
       <p className="mt-6 mb-20"><strong className="text-orange-500">Every Hook is initially added into a list that is reviewed on every render cycle</strong>. So if the Hooks don't add up, there is something amiss and any linter set up correctly will warn you.</p>
 
-    </article >
+    </section >
   )
 }
