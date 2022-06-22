@@ -136,7 +136,7 @@ function Example() {
         <button
           onClick={handleFavorite}
           className="dark:bg-orange-600 dark:text-zinc-50 text-orange-400 hover:bg-orange-500 hover:text-zinc-100 bg-zinc-700 dark:hover:bg-zinc-900 dark:hover:text-orange-400 py-1 px-4 rounded-md w-32">
-          {favorite ? 'Favorite' : 'Unfavorite'}
+          {favorite ? 'Unfavorite' : 'Favorite'}
         </button>
       </div>
 
