@@ -132,7 +132,7 @@ function Example() {
 
       </div>
       <div className='flex flex-col md:flex-row lg:flex-row gap-4 mt-12'>
-        {favorite ? <Star size={40} weight="fill" className="text-orange-600" /> :<Star size={40} className="text-orange-600" />}
+        {favorite ? <Star size={40} weight="fill" className="text-orange-600" /> : <Star size={40} className="text-orange-600" />}
         <button
           onClick={handleFavorite}
           className="dark:bg-orange-600 dark:text-zinc-50 text-orange-400 hover:bg-orange-500 hover:text-zinc-100 bg-zinc-700 dark:hover:bg-zinc-900 dark:hover:text-orange-400 py-1 px-4 rounded-md w-32">
