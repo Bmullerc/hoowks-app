@@ -109,9 +109,9 @@ function Example() {
         <li><strong>Line 12:</strong> When the user clicks the button, we call our <Code content="handleAddClick" /> function into action. React will then re-render the Example component, passing the new <Code content="count" /> value to it.</li>
       </ul>
 
-      <p className='mt-8 mb-8 font-medium'>Bellow we have examples of what we learned:</p>
-
-      <div className='flex flex-col md:flex-row lg:flex-row gap-4'>
+      <h3 className="text-3xl font-bold mt-20">Some examples of what we learned:</h3>
+  
+      <div className='flex flex-col md:flex-row lg:flex-row gap-4 mt-12'>
         <button
           onClick={() => setCount(0)}
           className="dark:bg-orange-600 dark:text-zinc-50 text-orange-400 hover:bg-orange-500 hover:text-zinc-100 bg-zinc-700 dark:hover:bg-zinc-900 dark:hover:text-orange-400 py-1 px-4 rounded-md">
@@ -129,8 +129,37 @@ function Example() {
           className="dark:bg-orange-600 dark:text-zinc-50 text-orange-400 hover:bg-orange-500 hover:text-zinc-100 bg-zinc-700 dark:hover:bg-zinc-900 dark:hover:text-orange-400 py-1 px-4 rounded-md">
           Sub
         </button>
-
       </div>
+
+      <PreCode
+      code={`function ExampleCounter() {
+  const [count, setCount] = useState(0);
+
+  function handleAddClick() {
+    setCount(prevState => prevState + 1)
+  }
+
+  function handleSubClick() {
+    setCount(prevState => prevState - 1)
+  }
+
+  return (
+    <div>
+        <button onClick={() => setCount(0)}>
+          Reset
+        </button>
+        <p>You clicked <strong>{count}</strong> times</p>
+
+        <button onClick={handleAddClick}>
+          Add
+        </button>
+        <button onClick={handleSubClick}>
+          Sub
+        </button>
+    </div>
+  )
+}`} />
+
       <div className='flex flex-col md:flex-row lg:flex-row gap-4 mt-12'>
         {favorite ? <Star size={40} weight="fill" className="text-orange-600" /> : <Star size={40} className="text-orange-600" />}
         <button
@@ -140,17 +169,31 @@ function Example() {
         </button>
       </div>
 
+      <PreCode
+      code={`function ExampleFavorite() {
+  const favorite, setFavorite] = useState(false);
+
+  function handleFavorite() {
+    setFavorite(prevState => !prevState)
+  }
+
+  return (
+    <div>
+        {favorite ? <Star weight="fill" /> : <Star />}
+      <button onClick={handleFavorite}>
+        {favorite ? 'Unfavorite' : 'Favorite'}
+      </button>
+    </div>
+  )
+}`} />
+
       <div className='flex flex-col md:flex-row lg:flex-row gap-4 mt-12 items-center'>
-        <button
-          onClick={handleLikes}
-        >
+        <button onClick={handleLikes}>
           {(likes === 0) ? <ThumbsUp size={40} /> : <ThumbsUp size={40} weight="fill" />}
           {likes}
         </button>
 
-        <button
-          onClick={handleDislikes}
-        >
+        <button onClick={handleDislikes}>
           {(dislikes === 0) ? <ThumbsDown size={40} /> : <ThumbsDown size={40} weight="fill" />}
           {dislikes}
         </button>
@@ -161,6 +204,38 @@ function Example() {
           Reset
         </button>
       </div>
+
+      <PreCode
+      code={`function ExampleLikes() {
+  const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0);
+
+  function handleDislikes() {
+    setDislikes(prevState => prevState + 1)
+  }
+
+  function handleLikes() {
+    setLikes(prevState => prevState + 1)
+  }
+
+  return (
+    <div>
+        <button onClick={handleLikes}>
+          {(likes === 0) ? <ThumbsUp /> : <ThumbsUp weight="fill" />}
+          {likes}
+        </button>
+
+        <button onClick={handleDislikes}>
+          {(dislikes === 0) ? <ThumbsDown /> : <ThumbsDown weight="fill" />}
+          {dislikes}
+        </button>
+
+        <button onClick={() => { setLikes(0), setDislikes(0) }}>
+          Reset
+        </button>
+    </div>
+  )
+}`} />
 
       <p className='text-xs inline-block mt-8 mb-20'>For more, check the <a href="https://reactjs.org/docs/hooks-state.html" className=" hover:text-orange-500">Official Docs</a></p>
     </article>
