@@ -223,7 +223,7 @@ React.useEffect(() => {
   <strong>{windowHeightSize}</strong> pixels high.</p>
 }`} />
 
-      <a href="https://reactjs.org/docs/hooks-effect.html" className="text-sm inline-block mt-12 mb-20 hover:text-orange-500">Official Docs</a>
+      <a href="https://reactjs.org/docs/hooks-effect.html" className="text-xs inline-block mt-8 mb-20 hover:text-orange-500">For more, check the Official Docs</a>
 
 
 

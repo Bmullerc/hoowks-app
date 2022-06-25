@@ -173,7 +173,7 @@ function Component5() {
 
 
 
-      <a href="https://reactjs.org/docs/hooks-reference.html#usecontext" className="text-sm inline-block my-4 hover:text-orange-500">Official Docs</a>
+      <a href="https://reactjs.org/docs/hooks-reference.html#usecontext" className="text-xs inline-block mt-8 hover:text-orange-500 mb-20">For more, check the Official Docs</a>
 
     </article>
   )
