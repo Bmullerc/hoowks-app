@@ -237,7 +237,7 @@ function Example() {
   )
 }`} />
 
-      <p className='text-xs inline-block mt-8 mb-20'>For more, check the <a href="https://reactjs.org/docs/hooks-state.html" className=" hover:text-orange-500">Official Docs</a></p>
+      <p className='text-xs inline-block mt-8 mb-20'>For more, check the <a href="https://reactjs.org/docs/hooks-state.html" className=" hover:text-orange-500">Official Docs</a>.</p>
     </article>
   )
 }

@@ -67,7 +67,7 @@ function Component5({ user }) {
       <p>Even though components 2-4 did not need the state, they had to pass the state along so that it could reach component 5.</p>
 
       <HotTip
-        text={<p>Like in the example above, passing the state as <Code content="props" /> is called "prop drilling" and can become a problem in larger projects. It should be avoided.</p>} />
+        text={<p className="dark:text-zinc-700">Like in the example above, passing the state as <Code content="props" /> is called "prop drilling" and can become a problem in larger projects. It should be avoided.</p>} />
 
       <h3 className="text-xl font-bold mt-12 mb-4">Ok... But how does it work?</h3>
       <p>We must first Import <Code content="createContext" /> and initialize it to then be able to create context.</p>
@@ -118,7 +118,7 @@ const UserContext = createContext()`} />
       <h3 className="text-xl font-bold mt-12">Full example:</h3>
 
       <PreCode
-      code={`import { useState, createContext, useContext } from "react";
+        code={`import { useState, createContext, useContext } from "react";
 
 const UserContext = createContext();
 
@@ -173,7 +173,7 @@ function Component5() {
 
 
 
-      <a href="https://reactjs.org/docs/hooks-reference.html#usecontext" className="text-xs inline-block mt-8 hover:text-orange-500 mb-20">For more, check the Official Docs</a>
+      <p className="text-xs inline-block mt-8 mb-20">For more, check the <a href="https://reactjs.org/docs/hooks-reference.html#usecontext" className="hover:text-orange-500">Official Docs</a>.</p>
 
     </article>
   )
