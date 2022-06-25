@@ -15,7 +15,7 @@ export function HotTip(props) {
 
 export function PreCode(props) {
   return (
-    <pre className='my-6 bg-zinc-300 rounded-md p-4 lg:w-fit overflow-auto dark:bg-zinc-900 dark:text-zinc-300'>
+    <pre className='my-6 bg-zinc-300 rounded-md md:p-4 p-2 md:w-fit lg:text-base overflow-auto dark:bg-zinc-900 dark:text-zinc-300'>
         <code>
           {props.code}
         </code>

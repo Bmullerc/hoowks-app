@@ -4,6 +4,7 @@ import { Code, HotTip, PreCode } from '../Snippets/RepeatedCode'
 export function UseEffect() {
   const [count, setCount] = useState(0);
   const [windowWidthSize, setWindowWidthSize] = useState(0);
+  const [windowHeightSize , setWindowHeightSize] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -15,9 +16,10 @@ export function UseEffect() {
 
   useEffect(() => {
     function handleResize() {
-      const { width } = document.body.getBoundingClientRect();
+      const { width, height } = document.body.getBoundingClientRect();
 
       setWindowWidthSize(Math.ceil(width));
+      setWindowHeightSize(Math.ceil(height));
     }
 
     window.addEventListener('scroll', handleResize);
@@ -29,7 +31,7 @@ export function UseEffect() {
     <article id="effect" className='border-b-2 border-orange-300 my-20'>
       <h3 className="text-4xl font-bold mb-4">useEffect</h3>
 
-      <p>The Effect Hook lets you perform side effects in function components. It accepts two arguments, the second argument is optional.</p>
+      <p>The Effect Hook lets you perform side effects in function components. It accepts two arguments, the first is a function and the second argument is a dependency, which is optional.</p>
 
       <pre className='mt-6 mb-6 bg-zinc-300 rounded-md p-4 lg:w-fit overflow-auto dark:bg-zinc-900 dark:text-zinc-300'>
         <code>
@@ -37,7 +39,7 @@ export function UseEffect() {
         </code>
       </pre>
 
-      <p>Let's use a timer as an example, we'll use setTimeout() to count 1 second after initial render:</p>
+      <p>Let's use a timer as an example, we'll use <Code content="setTimeout()" /> to count 1 second after initial render:</p>
 
       <PreCode
         code={`import { useState, useEffect } from "react";
@@ -54,7 +56,7 @@ function Timer() {
   return <h1>I've rendered {count} times!</h1>;
 }`} />
 
-      <p>This snippet is based on the counter example from <a href="#state"><Code content="useState" /></a> <span className='text-sm'>(click if you need a refresher)</span>. But now, by using the <Code content="useEffect" /> Hook and passing the first argument (always a function), in this case setTimeout, which will run itself after one second and then the <Code content="setCount" /> function will add one to our <Code content="count" /> as we've seen previously.</p>
+      <p>This snippet is based on the counter example from <a href="#state"><Code content="useState" /></a> <span className='text-sm'>(click if you need a refresher)</span>. But now, by using the <Code content="useEffect" /> Hook and passing the first argument <Code content="setTimeout" />, it will run after one second and then the <Code content="setCount" /> function will add one to our <Code content="count" /> as we've seen previously.</p>
 
       <HotTip
         text={<p className="dark:text-zinc-700">Careful! The example above keeps counting even though it should only count once, but since the Effect Hook runs on every render, this means that when the <Code content="count" /> changes, a render happens, which then triggers another effect. We should always include the second parameter which accepts an array. We can optionally pass dependencies to <Code content="useEffect" /> in this array. Check more <a href="#effect-dependency" className='text-orange-600 hover:text-zinc-100 rounded-sm'>here</a>.</p>}
@@ -197,20 +199,23 @@ React.useEffect(() => {
     return () => clearTimeout(timer)
   }, [count]);
 
-  return <p><strong>{count}</strong> -&gt; Every 5 seconds, I increase by one.</p>
+  return <p><strong>{count}</strong> -&gt; Every 5 seconds, 
+  I increase by one.</p>
 }`} />
 
-      <p className='mt-12'>The window size is <span className='text-4xl'>{windowWidthSize}</span> pixels.</p>
+      <p className='mt-12'>This page is <span className='text-4xl'>{windowWidthSize}</span> pixels long and <span className='text-4xl'>{windowHeightSize}</span> pixels high.</p>
 
       <PreCode
         code={`function ExampleWindowSize() {
   const [windowWidthSize, setWindowWidthSize] = useState(0);
+  const [windowHeightSize , setWindowHeightSize] = useState(0);
 
   useEffect(() => {
     function handleResize() {
-      const { width } = document.body.getBoundingClientRect();
+      const { width, height } = document.body.getBoundingClientRect();
 
       setWindowWidthSize(Math.ceil(width));
+      setWindowHeightSize(Math.ceil(height));
     }
 
     window.addEventListener('scroll', handleResize);
@@ -218,7 +223,8 @@ React.useEffect(() => {
     return () => window.removeEventListener('scroll', handleResize);
   }, []);
 
-  return <p>The window size is <strong>{windowWidthSize}</strong> pixels.</p>
+  return <p>This page is <strong>{windowWidthSize}</strong> pixels long and 
+  <strong>{windowHeightSize}</strong> pixels high.</p>
 }`} />
 
       <a href="https://reactjs.org/docs/hooks-effect.html" className="text-sm inline-block mt-12 mb-20 hover:text-orange-500">Official Docs</a>

@@ -179,7 +179,7 @@ function Example() {
 
   return (
     <div>
-        {favorite ? <Star weight="fill" /> : <Star />}
+      {favorite ? <Star weight="fill" /> : <Star />}
       <button onClick={handleFavorite}>
         {favorite ? 'Unfavorite' : 'Favorite'}
       </button>
