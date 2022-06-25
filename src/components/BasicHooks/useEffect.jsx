@@ -33,11 +33,7 @@ export function UseEffect() {
 
       <p>The Effect Hook lets you perform side effects in function components. It accepts two arguments, the first is a function and the second argument is a dependency, which is optional.</p>
 
-      <pre className='mt-6 mb-6 bg-zinc-300 rounded-md p-4 lg:w-fit overflow-auto dark:bg-zinc-900 dark:text-zinc-300'>
-        <code>
-          {`useEffect(<function>, <dependency>)`}
-        </code>
-      </pre>
+      <PreCode code={`useEffect(<function>, <dependency>)`} />
 
       <p>Let's use a timer as an example, we'll use <Code content="setTimeout()" /> to count 1 second after initial render:</p>
 
@@ -64,7 +60,7 @@ function Timer() {
       </HotTip>
 
       <h3 className="text-xl font-bold mt-12 my-4">But what are side effects?</h3>
-      <p>Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects. There are two common kinds of side effects in React components: those that don't require cleanup, and those that do, we'll talk more about it bellow.</p>
+      <p>Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects. There are two common kinds of side effects in React components: those that don't require cleanup, and those that do, we'll talk more about it below.</p>
 
       <p className='mt-4'>Now, we've already seen this example, but let's take a closer look at it:</p>
 
@@ -90,7 +86,7 @@ function Timer() {
       <p>Placing <Code content="useEffect" /> inside the component lets us access the <Code content="count" /> state variable (or any props) right from the effect. We don't need a special API to read it — it's already in the function scope. Hooks embrace JavaScript closures and avoid introducing React-specific APIs where JavaScript already provides a solution.</p>
 
       <h3 className="text-3xl font-bold mt-20 mb-4" id="effect-dependency">Passing a Dependency, and why?</h3>
-      <p>If we have no dependencies, our Hook will keep triggering with every render, creating a loop. To avoid this, we can simply pass an optional dependency on the second parameter of the <Code content="useEffect" />, see the examples bellow: </p>
+      <p>If we have no dependencies, our Hook will keep triggering with every render, creating a loop. To avoid this, we can simply pass an optional dependency on the second parameter of the <Code content="useEffect" />, see the examples below: </p>
 
       <PreCode
         code={`useEffect(() => {
