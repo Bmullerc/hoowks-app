@@ -11,6 +11,7 @@ export function Extra() {
         <h3 className="text-3xl font-bold mb-4 mt-12">TODO</h3>
         <ul className="list-disc list-inside">
           <li className="text-xl font-bold line-through">Hook Logo</li>
+          <li className="text-xl font-bold line-through">Add Favicon</li>
           <li className="text-xl font-bold">Add README in EN and PT</li>
           <li className="text-xl font-bold">Advanced Hooks</li>
           <li>Maybe more "Extra Content" ?</li>
