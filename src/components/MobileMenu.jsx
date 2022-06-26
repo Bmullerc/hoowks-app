@@ -5,6 +5,7 @@ import { ThemeContext, themes } from "../theme/ThemeContext";
 import { DropdownMenu } from "./DropdownMenu"
 import Logo from "../img/Hoowks.png"
 import OrangeLogo from '../img/Hoowks-orange.png'
+import WhiteLogo from '../img/Hoowks-white.png'
 
 export function MobileMenu() {
   const [darkMode, setDarkMode] = useState(false);
@@ -22,11 +23,26 @@ export function MobileMenu() {
           <a
             href="#header"
             className="flex justify-center items-center gap-2 text-3xl font-extrabold hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
-            Hoowks <img
-                src={Logo}
-                onMouseOver={e => e.currentTarget.src = OrangeLogo}
-                onMouseOut={e => e.currentTarget.src = Logo}
-                className="inline-block h-7 hover:scale-110 hover:-translate-y-1 duration-300" />
+            Hoowks
+
+            <ThemeContext.Consumer>
+              {({ changeTheme }) => (
+                darkMode
+                  ?
+                  <img
+                    src={OrangeLogo}
+                    onMouseOver={e => e.currentTarget.src = WhiteLogo}
+                    onMouseOut={e => e.currentTarget.src = OrangeLogo}
+                    className="inline-block h-7 hover:scale-110 hover:-translate-y-1 duration-300" />
+                  :
+                  <img
+                    src={OrangeLogo}
+                    onMouseOver={e => e.currentTarget.src = Logo}
+                    onMouseOut={e => e.currentTarget.src = OrangeLogo}
+                    className="inline-block h-7 hover:scale-110 hover:-translate-y-1 duration-300" />
+              )}
+            </ThemeContext.Consumer>
+
           </a>
           <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
             <a href="#about">About</a>
@@ -46,7 +62,7 @@ export function MobileMenu() {
               darkMode
                 ?
                 <SunIcon
-                  className="h-6 w-6 text-orange-500 hover:text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90 inline-block"
+                  className="h-6 w-6 text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90 inline-block"
                   onClick={() => {
                     setDarkMode(!darkMode);
                     changeTheme(themes.light)
@@ -54,14 +70,14 @@ export function MobileMenu() {
                 />
                 :
                 <MoonIcon
-                  className="h-5 w-6 text-orange-500 hover:text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3 inline-block"
+                  className="h-5 w-6 text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3 inline-block"
                   onClick={() => {
                     setDarkMode(!darkMode);
                     changeTheme(themes.dark)
                   }}
                 />)}
           </ThemeContext.Consumer>
-          
+
         </ul>
       </Menu.Items>
     </Menu>
