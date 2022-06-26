@@ -3,6 +3,9 @@ import { SunIcon, MoonIcon } from '@heroicons/react/solid'
 import { useState } from "react";
 import { DropdownMenu } from "./DropdownMenu";
 import { ThemeContext, themes } from '../theme/ThemeContext';
+import Logo from '../img/Hoowks.png'
+import OrangeLogo from '../img/Hoowks-orange.png'
+import WhiteLogo from '../img/Hoowks-white.png'
 
 
 export function Navbar() {
@@ -15,12 +18,31 @@ export function Navbar() {
     >
       <a
         href="#header"
-        className="text-lg font-bold hover:text-orange-500 dark:text-zinc-50 hover:dark:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+        className="text-lg flex justify-center items-center gap-2 font-bold hover:text-orange-500 dark:text-zinc-50 hover:dark:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
         Hoowks
+
+        <ThemeContext.Consumer>
+          {({ changeTheme }) => (
+            darkMode
+              ?
+              <img
+                src={WhiteLogo}
+                onMouseOver={e => e.currentTarget.src = OrangeLogo}
+                onMouseOut={e => e.currentTarget.src = WhiteLogo}
+                className="inline-block h-4 hover:scale-110 hover:-translate-y-1 duration-300" />
+              :
+              <img
+                src={Logo}
+                onMouseOver={e => e.currentTarget.src = OrangeLogo}
+                onMouseOut={e => e.currentTarget.src = Logo}
+                className="inline-block h-4 hover:scale-110 hover:-translate-y-1 duration-300" />
+          )}
+        </ThemeContext.Consumer>
+
       </a>
       <ul className="flex flex-row gap-6">
 
-        
+
 
         <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
           <a href="#about">About</a>
