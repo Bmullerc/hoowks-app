@@ -26,15 +26,15 @@ export function Navbar() {
             darkMode
               ?
               <img
-                src={WhiteLogo}
-                onMouseOver={e => e.currentTarget.src = OrangeLogo}
-                onMouseOut={e => e.currentTarget.src = WhiteLogo}
+                src={OrangeLogo}
+                onMouseOver={e => e.currentTarget.src = WhiteLogo}
+                onMouseOut={e => e.currentTarget.src = OrangeLogo}
                 className="inline-block h-4 hover:scale-110 hover:-translate-y-1 duration-300" />
               :
               <img
-                src={Logo}
-                onMouseOver={e => e.currentTarget.src = OrangeLogo}
-                onMouseOut={e => e.currentTarget.src = Logo}
+                src={OrangeLogo}
+                onMouseOver={e => e.currentTarget.src = Logo}
+                onMouseOut={e => e.currentTarget.src = OrangeLogo}
                 className="inline-block h-4 hover:scale-110 hover:-translate-y-1 duration-300" />
           )}
         </ThemeContext.Consumer>
@@ -63,7 +63,7 @@ export function Navbar() {
               darkMode
                 ?
                 <SunIcon
-                  className="h-6 w-6 text-orange-500 hover:text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90 inline-block"
+                  className="h-6 w-6 text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90 inline-block"
                   onClick={() => {
                     setDarkMode(!darkMode);
                     changeTheme(themes.light)
@@ -71,7 +71,7 @@ export function Navbar() {
                 />
                 :
                 <MoonIcon
-                  className="h-5 w-6 text-orange-500 hover:text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3 inline-block"
+                  className="h-5 w-6 text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3 inline-block mb-1"
                   onClick={() => {
                     setDarkMode(!darkMode);
                     changeTheme(themes.dark)

@@ -3,6 +3,8 @@ import { MenuIcon, MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { useState } from "react";
 import { ThemeContext, themes } from "../theme/ThemeContext";
 import { DropdownMenu } from "./DropdownMenu"
+import Logo from "../img/Hoowks.png"
+import OrangeLogo from '../img/Hoowks-orange.png'
 
 export function MobileMenu() {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,9 +20,13 @@ export function MobileMenu() {
       >
         <ul className="flex flex-col items-center gap-6 py-4">
           <a
-            href="#home"
-            className="text-3xl font-extrabold hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
-            Hoowks
+            href="#header"
+            className="flex justify-center items-center gap-2 text-3xl font-extrabold hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+            Hoowks <img
+                src={Logo}
+                onMouseOver={e => e.currentTarget.src = OrangeLogo}
+                onMouseOut={e => e.currentTarget.src = Logo}
+                className="inline-block h-7 hover:scale-110 hover:-translate-y-1 duration-300" />
           </a>
           <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
             <a href="#about">About</a>
