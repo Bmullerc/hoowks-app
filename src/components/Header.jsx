@@ -4,7 +4,11 @@ export function Header() {
   return (
     <header id="header" className="flex justify-center items-center h-screen dark:bg-zinc-700 text-zinc-700 bg-zinc-200 tracking-tight dark:bg-gradient-to-b from-current to-orange-400 bg-gradient-to-t">
       <div className="text-center text-zinc-800">
-        <img src={Logo} className="inline-block lg:h-40 h-24 hover:scale-125 hover:-translate-y-6 duration-300"/>
+        <img
+          src={Logo}
+          alt="Hoowks Logo, a mix of a hook and an question mark"
+          className="inline-block lg:h-40 h-24 hover:scale-125 hover:-translate-y-6 duration-300"
+        />
         <h1 className="lg:text-7xl text-6xl font-bold">
           React<br></br>
           <span className="text-orange-400 py-1 tracking-wider uppercase lg:text-8xl text-7xl inline-block md:hover:scale-125 hover:translate-y-5 lg:hover:-translate-x-6 lg:hover:translate-y-1 transition-all duration-200 drop-shadow-lg">

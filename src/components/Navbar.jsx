@@ -27,12 +27,14 @@ export function Navbar() {
               ?
               <img
                 src={OrangeLogo}
+                alt="Hoowks Logo, a mix of a hook and an question mark"
                 onMouseOver={e => e.currentTarget.src = WhiteLogo}
                 onMouseOut={e => e.currentTarget.src = OrangeLogo}
                 className="inline-block h-4 hover:scale-110 hover:-translate-y-1 duration-300" />
               :
               <img
                 src={OrangeLogo}
+                alt="Hoowks Logo, a mix of a hook and an question mark"
                 onMouseOver={e => e.currentTarget.src = Logo}
                 onMouseOut={e => e.currentTarget.src = OrangeLogo}
                 className="inline-block h-4 hover:scale-110 hover:-translate-y-1 duration-300" />
