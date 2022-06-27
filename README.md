@@ -15,7 +15,7 @@ This is all coming from a student, still grasping a lot of the concepts of front
 ![Desktop](/Desktop.png)
 
 ### Live Site
-[Hoowks](hoowks.netlify.app/)
+[Hoowks](https://hoowks.netlify.app/)
 
 ## Built With
 
