@@ -1,7 +1,7 @@
 import { Menu } from "@headlessui/react"
 import { MenuIcon, MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { useState } from "react";
-import { ThemeContext, themes } from "../theme/ThemeContext";
+import { ThemeContext, themes } from "./ThemeContext";
 import { DropdownMenu } from "./DropdownMenu"
 import Logo from "../img/Hoowks.png"
 import OrangeLogo from '../img/Hoowks-orange.png'
@@ -26,7 +26,7 @@ export function MobileMenu() {
             Hoowks
 
             <ThemeContext.Consumer>
-              {({ changeTheme }) => (
+              {() => (
                 darkMode
                   ?
                   <img

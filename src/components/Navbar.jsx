@@ -2,7 +2,7 @@ import { Menu } from "@headlessui/react";
 import { Sun, Moon } from 'phosphor-react'
 import { useState } from "react";
 import { DropdownMenu } from "./DropdownMenu";
-import { ThemeContext, themes } from '../theme/ThemeContext';
+import { ThemeContext, themes } from './ThemeContext';
 import Logo from '../img/Hoowks.png'
 import OrangeLogo from '../img/Hoowks-orange.png'
 import WhiteLogo from '../img/Hoowks-white.png'
@@ -22,7 +22,7 @@ export function Navbar() {
         Hoowks
 
         <ThemeContext.Consumer>
-          {({ changeTheme }) => (
+          {() => (
             darkMode
               ?
               <img

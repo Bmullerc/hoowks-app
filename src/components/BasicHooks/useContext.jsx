@@ -171,7 +171,46 @@ function Component5() {
   );
 }`} />
 
+      <h3 className="text-3xl font-bold mt-20">More examples:</h3>
 
+      <PreCode
+      code={`import { createContext, useState, useEffect } from "react";
+
+export const themes = {
+  dark: "dark",
+  light: "",
+};
+
+export const ThemeContext = createContext({
+    theme: themes.dark,
+  changeTheme: () => {},
+});
+
+export function ThemeContextWrapper(props) {
+  const [theme, setTheme] = useState(themes.light);
+
+  function changeTheme(theme) {
+    setTheme(theme);
+  }
+
+  useEffect(() => {
+    switch (theme) {
+      case themes.dark:
+        document.body.classList.add('dark');
+        break;
+      case themes.light:
+      default:
+        document.body.classList.remove('dark');
+        break;
+    }
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider value={{ theme: theme, changeTheme: changeTheme }}>
+      {props.children}
+    </ThemeContext.Provider>
+  );
+}`} />
 
       <p className="text-xs inline-block mt-8 mb-20">For more, check the <a href="https://reactjs.org/docs/hooks-reference.html#usecontext" className="hover:text-orange-500">Official Docs</a>.</p>
 
