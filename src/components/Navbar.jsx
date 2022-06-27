@@ -1,5 +1,5 @@
 import { Menu } from "@headlessui/react";
-import { SunIcon, MoonIcon } from '@heroicons/react/solid'
+import { Sun, Moon } from 'phosphor-react'
 import { useState } from "react";
 import { DropdownMenu } from "./DropdownMenu";
 import { ThemeContext, themes } from '../theme/ThemeContext';
@@ -42,9 +42,7 @@ export function Navbar() {
         </ThemeContext.Consumer>
 
       </a>
-      <ul className="flex flex-row gap-6">
-
-
+      <ul className="flex flex-row justify-center items-center gap-6">
 
         <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
           <a href="#about">About</a>
@@ -64,20 +62,22 @@ export function Navbar() {
             {({ changeTheme }) => (
               darkMode
                 ?
-                <SunIcon
-                  className="h-6 w-6 text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90 inline-block"
+                <Sun
+                  className="h-5 w-5 text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90"
                   onClick={() => {
                     setDarkMode(!darkMode);
                     changeTheme(themes.light)
                   }}
+                  weight="fill"
                 />
                 :
-                <MoonIcon
-                  className="h-5 w-6 text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3 inline-block mb-1"
+                <Moon
+                  className="h-5 w-5 text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3"
                   onClick={() => {
                     setDarkMode(!darkMode);
                     changeTheme(themes.dark)
                   }}
+                  weight="fill"
                 />)}
           </ThemeContext.Consumer>
         </li>
