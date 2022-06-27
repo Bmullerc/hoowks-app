@@ -4,13 +4,16 @@
 My idea was to study React Hooks by creating a mock teaching page. With that in mind, I had to research and compile information to be able to explain and create examples while also practicing a lot of other concepts, skills and tools.
 
 ### Disclaimer
-This is all coming from a student, still grasping a lot of the concepts of front-end development. So, if anything is wrong or missing information, I will fix it. Also, this was heavely inspired by [W3Schools](https://www.w3schools.com/), [MDN](https://developer.mozilla.org/en-US/) and [React Official Docs](https://reactjs.org/docs/getting-started.html) and most of the information was taken from these sources.
+This is all coming from a student, still grasping a lot of the concepts of front-end development. So, if anything is wrong or missing information, I will fix it. Also, this was heavily inspired by [W3Schools](https://www.w3schools.com/), [MDN](https://developer.mozilla.org/en-US/) and [React Official Docs](https://reactjs.org/docs/getting-started.html) and most of the information was taken from these sources.
 
 ### Result Preview
+Mobile Menu
 ![MobileMenu](/MobileMenu.png)
 
+Mobile
 ![Mobile](/Mobile.png)
 
+Desktop
 ![Desktop](/Desktop.png)
 
 ### Live Site
@@ -36,8 +39,8 @@ This is all coming from a student, still grasping a lot of the concepts of front
 - Wrote the About and Disclaimer explaining the project.
 - Went on to actually start on the content, first with a basic Intro and then going into each of the three basic Hooks.
 - As I finished each Hooks, I tried to include self made examples.
-- At some point, I had a lot of reused lines caused by Tailwind and little code snippets, which I then replace with a simple <Code /> component.
-- Did the same as above to the <Pre> formatted code and HOT TIP, replacing them with a <PreCode /> and <HotTip /> components.
+- At some point, I had a lot of reused lines caused by Tailwind and little code snippets, which I then replace with a simple `<Code />` component.
+- Did the same as above to the `<Pre />` formatted code and HOT TIP, replacing them with a `<PreCode />` and `<HotTip />` components.
 - Added some Extra content and a Footer with my socials.
 - Created and Added the Logo and Favicon.
 - Added a TODO list for the future.
