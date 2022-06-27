@@ -7,13 +7,11 @@ My idea was to study React Hooks by creating a mock teaching page. With that in 
 This is all coming from a student, still grasping a lot of the concepts of front-end development. So, if anything is wrong or missing information, I will fix it. Also, this was heavily inspired by [W3Schools](https://www.w3schools.com/), [MDN](https://developer.mozilla.org/en-US/) and [React Official Docs](https://reactjs.org/docs/getting-started.html) and most of the information was taken from these sources.
 
 ### Result Preview
-Mobile Menu
+
 ![MobileMenu](/MobileMenu.png)
 
-Mobile
 ![Mobile](/Mobile.png)
 
-Desktop
 ![Desktop](/Desktop.png)
 
 ### Live Site
