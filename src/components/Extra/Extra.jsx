@@ -8,15 +8,15 @@ export function Extra() {
 
         <LifeCycles />
 
-        <h3 className="text-3xl font-bold mb-4 mt-12">TODO</h3>
+        <h3 className="text-3xl font-bold mb-4 mt-12">TODO List</h3>
         <ul className="list-disc list-inside">
           <li className="text-xl font-bold line-through">Hook Logo</li>
           <li className="text-xl font-bold line-through">Add Favicon</li>
           <li className="text-xl font-bold">Add README in EN and PT</li>
-          <li className="text-xl font-bold">Advanced Hooks</li>
+          <li className="text-xl font-bold">Port to Typescript</li>
+          <li>Advanced Hooks ?</li>
           <li>Maybe more "Extra Content" ?</li>
           <li>useContext Example ?</li>
-          <li>Port to Typescript ?</li>
           <li>Typescript / Next versions ???</li>
         </ul>
     </section>
