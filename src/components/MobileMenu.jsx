@@ -1,5 +1,5 @@
 import { Menu } from "@headlessui/react"
-import { MenuIcon, MoonIcon, SunIcon } from '@heroicons/react/solid'
+import { Sun, Moon } from 'phosphor-react'
 import { useState } from "react";
 import { ThemeContext, themes } from "./ThemeContext";
 import { DropdownMenu } from "./DropdownMenu"
@@ -63,7 +63,7 @@ export function MobileMenu() {
             {({ changeTheme }) => (
               darkMode
                 ?
-                <SunIcon
+                <Sun
                   className="h-6 w-6 text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90 inline-block"
                   onClick={() => {
                     setDarkMode(!darkMode);
@@ -71,7 +71,7 @@ export function MobileMenu() {
                   }}
                 />
                 :
-                <MoonIcon
+                <Moon
                   className="h-5 w-6 text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3 inline-block"
                   onClick={() => {
                     setDarkMode(!darkMode);
