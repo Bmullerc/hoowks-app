@@ -1,6 +1,7 @@
 import { Menu, Transition } from "@headlessui/react"
 import { Fragment } from 'react'
-import { ChevronDownIcon, PencilAltIcon, CodeIcon, ColorSwatchIcon } from '@heroicons/react/solid'
+import { CaretDown, NotePencil, Code, Palette } from 'phosphor-react'
+
 
 export function DropdownMenu() {
   return (
@@ -9,9 +10,10 @@ export function DropdownMenu() {
         className="inline-flex items-center w-full justify-center hover:cursor-pointer hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in"
       >
         Basic Hooks
-        <ChevronDownIcon
+        <CaretDown
           className="ml-1 -mr-1 h-5 w-5 text-orange-500 hover:text-orange-800 hover:dark:text-orange-100"
           aria-hidden="true"
+          weight="fill"
         />
       </Menu.Button>
       <Transition
@@ -31,7 +33,7 @@ export function DropdownMenu() {
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
                 href="#state"
               >
-                <PencilAltIcon
+                <NotePencil
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}         
                 />
                 useState
@@ -44,7 +46,7 @@ export function DropdownMenu() {
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
                 href="#effect"
               >
-                <ColorSwatchIcon
+                <Palette
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
                 />
                 useEffect
