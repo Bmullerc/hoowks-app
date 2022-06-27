@@ -171,7 +171,7 @@ function Component5() {
   );
 }`} />
 
-      <h3 className="text-3xl font-bold mt-20">More examples:</h3>
+      <h3 className="text-3xl font-bold mt-20">Another Example:</h3>
 
       <PreCode
       code={`import { createContext, useState, useEffect } from "react";
