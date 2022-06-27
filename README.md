@@ -17,7 +17,7 @@ Desktop
 ![Desktop](/Desktop.png)
 
 ### Live Site
-[Link](hoowks.netlify.app/)
+[Hoowks](hoowks.netlify.app/)
 
 ## Built With
 
