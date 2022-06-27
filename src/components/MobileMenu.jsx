@@ -1,5 +1,5 @@
 import { Menu } from "@headlessui/react"
-import { Sun, Moon } from 'phosphor-react'
+import { Sun, Moon, List } from 'phosphor-react'
 import { useState } from "react";
 import { ThemeContext, themes } from "./ThemeContext";
 import { DropdownMenu } from "./DropdownMenu"
@@ -12,9 +12,10 @@ export function MobileMenu() {
 
   return (
     <Menu as="nav" className="fixed right-4 top-4 z-10">
-      <Menu.Button className="dark:text-zinc-900 dark:bg-orange-400 text-orange-100 bg-zinc-900">
-        <MenuIcon
-          className="h-10 w-10" />
+      <Menu.Button className="dark:text-zinc-900 dark:bg-orange-400 text-orange-100 bg-zinc-900 rounded-md">
+        <List
+          weight="bold"
+          size={46} />
       </Menu.Button>
       <Menu.Items
         className="text-lg flex-col h-fit w-80 rounded-xl absolute top-16 right-0 items-center py-2 px-4 lg:py-2 lg:px-8 dark:bg-zinc-800 dark:text-zinc-50 text-zinc-700 bg-zinc-50 shadow-sm"

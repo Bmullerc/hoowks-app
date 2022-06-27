@@ -34,6 +34,7 @@ export function DropdownMenu() {
                 href="#state"
               >
                 <NotePencil
+                  weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}         
                 />
                 useState
@@ -47,6 +48,7 @@ export function DropdownMenu() {
                 href="#effect"
               >
                 <Palette
+                  weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
                 />
                 useEffect
@@ -59,7 +61,8 @@ export function DropdownMenu() {
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
                 href="#context"
               >
-                <CodeIcon
+                <Code
+                  weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
                 />
                 useContext
