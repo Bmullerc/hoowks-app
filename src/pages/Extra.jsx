@@ -1,8 +1,8 @@
-import { LifeCycles } from "./Lifecycles";
+import { LifeCycles } from "../components/Extra/Lifecycles";
 
 export function Extra() {
   return (
-    <section className="mt-20">
+    <section className="text-left dark:bg-zinc-700 dark:text-zinc-200 text-zinc-700 bg-zinc-200 py-24 px-4 md:px-16 lg:px-52 2xl:px-72">
         <h3 className="text-5xl font-bold mb-4" id="extra">Some Extra Content</h3>
         <p className="text-sm">Might be useful, idk.</p>
 

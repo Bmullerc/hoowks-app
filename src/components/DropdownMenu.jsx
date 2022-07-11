@@ -9,7 +9,7 @@ export function DropdownMenu() {
       <Menu.Button
         className="inline-flex items-center w-full justify-center hover:cursor-pointer hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in"
       >
-        Basic Hooks
+        <a href="/basichooks/">Basic Hooks</a>
         <CaretDown
           className="ml-1 -mr-1 h-5 w-5 text-orange-500 hover:text-orange-800 hover:dark:text-orange-100"
           aria-hidden="true"
@@ -31,7 +31,7 @@ export function DropdownMenu() {
             {({ active }) => (
               <a
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
-                href="#state"
+                href="/basichooks/#state"
               >
                 <NotePencil
                   weight="bold"
@@ -45,7 +45,7 @@ export function DropdownMenu() {
             {({ active }) => (
               <a
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
-                href="#effect"
+                href="/basichooks/#effect"
               >
                 <Palette
                   weight="bold"
@@ -59,7 +59,7 @@ export function DropdownMenu() {
             {({ active }) => (
               <a
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
-                href="#context"
+                href="/basichooks/#context"
               >
                 <Code
                   weight="bold"

@@ -2,7 +2,7 @@ import { Code } from "./Snippets/RepeatedCode";
 
 export function Intro() {
   return (
-    <section className="border-b-2 border-zinc-300 mb-20">
+    <section className="border-b-2 border-zinc-300 text-left dark:bg-zinc-700 dark:text-zinc-200 text-zinc-700 bg-zinc-200 py-24 px-4 md:px-16 lg:px-52 2xl:px-72">
       <h2 id="intro" className="lg:text-5xl text-4xl font-bold">What are Hooks in React anyway?</h2>
       <ul className="mt-12">
         <li><strong className="text-orange-500">Hooks</strong> let you use React features without writing a class. </li>

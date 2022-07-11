@@ -17,7 +17,7 @@ export function Navbar() {
       className="flex fixed w-screen justify-between items-center py-2 px-4 2xl:px-72 lg:px-52 dark:bg-zinc-800 dark:text-zinc-50 text-zinc-700 bg-zinc-50 shadow-sm z-10"
     >
       <a
-        href="#header"
+        href="/#header"
         className="text-lg flex justify-center items-center gap-2 font-bold hover:text-orange-500 dark:text-zinc-50 hover:dark:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
         Hoowks
 
@@ -45,14 +45,14 @@ export function Navbar() {
       <ul className="flex flex-row justify-center items-center gap-6">
 
         <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
-          <a href="#about">About</a>
+          <a href="/#about">About</a>
         </li>
         <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
-          <a href="#intro">Intro</a>
+          <a href="/#intro">Intro</a>
         </li>
         <DropdownMenu />
         <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
-          <a href="#extra">Extra</a>
+          <a href="/extra">Extra</a>
         </li>
         <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
           <a href="#contact">Contact</a>

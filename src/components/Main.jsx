@@ -1,5 +1,5 @@
-import { BasicHooks } from "./BasicHooks";
-import { Extra } from "./Extra/Extra";
+import { BasicHooks } from "../pages/BasicHooks";
+import { Extra } from "../pages/Extra";
 import { Intro } from "./Intro";
 
 export function Main() {
