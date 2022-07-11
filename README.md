@@ -44,10 +44,16 @@ This is all coming from a student, still grasping a lot of the concepts of front
 - Added a TODO list for the future.
 - Also always kept changing and improving on the layout, making adjustments to theme colors, margins, responsiveness and other details as I went.
 
+# Process 2.0
+- Tried to port to Typescript but failed to make everything work and rolled back.
+- Preparing for future Intermediate Hooks and other Content.
+- Added React Router and started playing around with page routing.
+
+
 ## Need to Improve
 
 - From these three Hooks, useContext is still not 100% clear in my mind. Need more Practice.
 
 ## Next Steps
 
-- Really learn Typescript and then Next.
+- Need to learn Next.
