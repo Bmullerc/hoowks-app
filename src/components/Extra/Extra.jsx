@@ -13,10 +13,10 @@ export function Extra() {
           <li className="text-xl font-bold line-through">Hook Logo</li>
           <li className="text-xl font-bold line-through">Add Favicon</li>
           <li className="text-xl font-bold">Add README in EN and PT</li>
-          <li className="text-xl font-bold">Port to Typescript</li>
-          <li>Advanced Hooks ?</li>
+          <li className="text-xl font-bold">Intermediate Hooks</li>
+          <li>Extra content about memoization</li>
+          <li>Advanced Hooks</li>
           <li>Maybe more "Extra Content" ?</li>
-          <li>useContext Example ?</li>
           <li>Typescript / Next versions ???</li>
         </ul>
     </section>
