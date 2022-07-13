@@ -11,6 +11,7 @@ export function Extra() {
         <h3 className="text-3xl font-bold mb-4 mt-12">TODO List</h3>
         <ul className="list-disc list-inside">
           <li className="text-xl font-bold">Add README in PT</li>
+          <li className="text-xl font-bold">FIX theme not saving on page change/reload</li>
           <li className="text-xl font-bold">Intermediate Hooks</li>
           <li className="text-xl font-bold">React Router</li>
           <li>Extra content about memoization</li>
