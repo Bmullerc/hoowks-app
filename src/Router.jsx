@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { BasicHooks } from './pages/BasicHooks'
 import { Extra } from './pages/Extra'
-import { DefaultLayout } from './layouts/DefaultLayout'
+import { DefaultLayout } from './Layouts/DefaultLayout'
 import { Home } from './pages/Home'
 
 
