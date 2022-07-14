@@ -46,14 +46,19 @@ This is all coming from a student, still grasping a lot of the concepts of front
 
 ### Process 2.0
 - Tried to port to Typescript but failed to make everything work and rolled back.
-- Preparing for future Intermediate Hooks and other Content.
+- Preparing for future "Intermediate Hooks" and other Content.
 - Added React Router and started playing around with page routing.
+- Found a problem with the addition of Routes, the theme was reverting back to light (default) when loading/reloading pages.
+- Fixed the theme problem with the use of LocalStorage.
+- Changed the theme changing Icons to use LocalStorage aswell.
 
 
 ## Need to Improve
 
-- From these three Hooks, useContext is still not 100% clear in my mind. Need more Practice.
+- Page loading/changing seems rough at times, not sure what can be done.
+- Tried to port to Typescript but could not figure out some of the problems and couldn't make the app work because of them.
 
 ## Next Steps
 
+- Need to learn more about testing. (I'll try to use Vitest on this app and let's hope I don't break it again)
 - Need to learn Next.
