@@ -8,7 +8,10 @@ import OrangeLogo from '../img/Hoowks-orange.png'
 import WhiteLogo from '../img/Hoowks-white.png'
 
 export function MobileMenu() {
-  const [darkMode, setDarkMode] = useState(false);
+  const theme = localStorage.getItem("theme")
+  const isDark = (theme === "dark")
+
+  const [darkMode, setDarkMode] = useState(isDark);
 
   return (
     <Menu as="nav" className="fixed right-4 top-4 z-10">
@@ -22,7 +25,7 @@ export function MobileMenu() {
       >
         <ul className="flex flex-col items-center gap-6 py-4">
           <a
-            href="#header"
+            href="/#header"
             className="flex justify-center items-center gap-2 text-3xl font-extrabold hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
             Hoowks
 
@@ -48,14 +51,14 @@ export function MobileMenu() {
 
           </a>
           <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
-            <a href="#about">About</a>
+            <a href="/#about">About</a>
           </li>
           <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
-            <a href="#intro">Intro</a>
+            <a href="/#intro">Intro</a>
           </li>
           <DropdownMenu />
           <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
-            <a href="#extra">Extra</a>
+            <a href="/extra">Extra</a>
           </li>
           <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
             <a href="#contact">Contact</a>
@@ -68,7 +71,7 @@ export function MobileMenu() {
                   weight="fill"
                   className="h-6 w-6 text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90 inline-block"
                   onClick={() => {
-                    setDarkMode(!darkMode);
+                    setDarkMode(false);
                     changeTheme(themes.light)
                   }}
                 />
@@ -77,7 +80,7 @@ export function MobileMenu() {
                   weight="fill"
                   className="h-5 w-6 text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3 inline-block"
                   onClick={() => {
-                    setDarkMode(!darkMode);
+                    setDarkMode(true);
                     changeTheme(themes.dark)
                   }}
                 />)}
