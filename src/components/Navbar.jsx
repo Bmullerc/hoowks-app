@@ -65,7 +65,7 @@ export function Navbar() {
                 <Sun
                   className="h-5 w-5 text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90"
                   onClick={() => {
-                    setDarkMode(!darkMode);
+                    setDarkMode(!darkMode)
                     changeTheme(themes.light)
                   }}
                   weight="fill"

@@ -6,26 +6,28 @@ export const themes = {
 };
 
 export const ThemeContext = createContext({
-    theme: themes.dark,
-  changeTheme: () => {},
+  theme: themes.dark,
+  changeTheme: () => { },
 });
 
 export function ThemeContextWrapper(props) {
-  const [theme, setTheme] = useState(themes.light);
+  const [theme, setTheme] = useState(localStorage.getItem("theme"))
+
+  const savedTheme = localStorage.getItem("theme")
+  console.log(savedTheme)
+
 
   function changeTheme(theme) {
-    setTheme(theme);
+      setTheme(theme)
   }
 
   useEffect(() => {
-    switch (theme) {
-      case themes.dark:
-        document.body.classList.add('dark');
-        break;
-      case themes.light:
-      default:
-        document.body.classList.remove('dark');
-        break;
+    if (theme === themes.dark) {
+      document.body.classList.add('dark')
+      localStorage.setItem("theme", "dark")
+    } else {
+      document.body.classList.remove('dark')
+      localStorage.setItem("theme", "light")
     }
   }, [theme]);
 
