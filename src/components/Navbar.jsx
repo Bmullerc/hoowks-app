@@ -9,7 +9,10 @@ import WhiteLogo from '../img/Hoowks-white.png'
 
 
 export function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
+  const theme = localStorage.getItem("theme")
+  const isDark = (theme === "dark")
+
+  const [darkMode, setDarkMode] = useState(isDark);
 
   return (
     <Menu
@@ -65,7 +68,7 @@ export function Navbar() {
                 <Sun
                   className="h-5 w-5 text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90"
                   onClick={() => {
-                    setDarkMode(!darkMode)
+                    setDarkMode(false)
                     changeTheme(themes.light)
                   }}
                   weight="fill"
@@ -74,7 +77,7 @@ export function Navbar() {
                 <Moon
                   className="h-5 w-5 text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3"
                   onClick={() => {
-                    setDarkMode(!darkMode);
+                    setDarkMode(true);
                     changeTheme(themes.dark)
                   }}
                   weight="fill"

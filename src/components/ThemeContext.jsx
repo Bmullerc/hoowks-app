@@ -6,7 +6,6 @@ export const themes = {
 };
 
 export const ThemeContext = createContext({
-  theme: themes.dark,
   changeTheme: () => { },
 });
 
@@ -32,7 +31,7 @@ export function ThemeContextWrapper(props) {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme: theme, changeTheme: changeTheme }}>
+    <ThemeContext.Provider value={{ changeTheme: changeTheme }}>
       {props.children}
     </ThemeContext.Provider>
   );
