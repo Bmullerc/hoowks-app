@@ -12,10 +12,6 @@ export const ThemeContext = createContext({
 export function ThemeContextWrapper(props) {
   const [theme, setTheme] = useState(localStorage.getItem("theme"))
 
-  const savedTheme = localStorage.getItem("theme")
-  console.log(savedTheme)
-
-
   function changeTheme(theme) {
       setTheme(theme)
   }
