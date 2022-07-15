@@ -1,5 +1,5 @@
-import { MobileMenu } from "../components/MobileMenu"
-import { Navbar } from "../components/Navbar"
+import { MobileMenu } from "./MobileMenu"
+import { Navbar } from "./Navbar"
 import { isMobile, isTablet } from "react-device-detect"
 import { Outlet } from 'react-router-dom'
 import { Contact } from '../components/Contact'

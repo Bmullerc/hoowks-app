@@ -3,13 +3,13 @@ import { Fragment } from 'react'
 import { CaretDown, NotePencil, Code, Palette } from 'phosphor-react'
 
 
-export function DropdownMenu() {
+export function InterHooksDropmenu() {
   return (
     <Menu>
       <Menu.Button
         className="inline-flex items-center w-full justify-center hover:cursor-pointer hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in"
       >
-        <a href="/basichooks/">Basic Hooks</a>
+        <a href="/interhooks/" className="whitespace-nowrap">Intermediate Hooks</a>
         <CaretDown
           className="ml-1 -mr-1 h-5 w-5 text-orange-500 hover:text-orange-800 hover:dark:text-orange-100"
           aria-hidden="true"
@@ -26,18 +26,18 @@ export function DropdownMenu() {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className="lg:absolute flex flex-col right-14 md:right-24 2xl:right-96 lg:right-80 top-56 md:top-8 mt-2 w-52 origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 divide-y divide-gray-100 rounded-sm border-none outline-none z-50">
+          className=" flex flex-col right-14 md:right-24 2xl:right-96 lg:right-80 top-56 md:top-8 mt-2 w-52 origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 divide-y divide-gray-100 rounded-sm border-none outline-none">
           <Menu.Item>
             {({ active }) => (
               <a
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
-                href="/basichooks/#state"
+                href="/interhooks/#callback"
               >
                 <NotePencil
                   weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}         
                 />
-                useState
+                useCallback
               </a>
             )}
           </Menu.Item>
@@ -45,13 +45,13 @@ export function DropdownMenu() {
             {({ active }) => (
               <a
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
-                href="/basichooks/#effect"
+                href="/interhooks/#id"
               >
                 <Palette
                   weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
                 />
-                useEffect
+                useId
               </a>
             )}
           </Menu.Item>
@@ -59,13 +59,41 @@ export function DropdownMenu() {
             {({ active }) => (
               <a
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
-                href="/basichooks/#context"
+                href="/interhooks/#memo"
               >
                 <Code
                   weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
                 />
-                useContext
+                useMemo
+              </a>
+            )}
+          </Menu.Item>
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
+                href="/interhooks/#reducer"
+              >
+                <Code
+                  weight="bold"
+                  className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
+                />
+                useReducer
+              </a>
+            )}
+          </Menu.Item>
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
+                href="/interhooks/#ref"
+              >
+                <Code
+                  weight="bold"
+                  className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
+                />
+                useRef
               </a>
             )}
           </Menu.Item>

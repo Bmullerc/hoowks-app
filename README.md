@@ -51,12 +51,15 @@ This is all coming from a student, still grasping a lot of the concepts of front
 - Found a problem with the addition of Routes, the theme was reverting back to light (default) when loading/reloading pages.
 - Fixed the theme problem with the use of LocalStorage.
 - Changed the theme changing Icons to use LocalStorage aswell.
+- Started working on consolidating the Hooks dropdowns into a single Content dropdown.
 
 
 ## Need to Improve
 
 - Page loading/changing seems rough at times, not sure what can be done.
+- Improve the Pages and Nav anchors related to them.
 - Tried to port to Typescript but could not figure out some of the problems and couldn't make the app work because of them.
+- Folder management
 
 ## Next Steps
 

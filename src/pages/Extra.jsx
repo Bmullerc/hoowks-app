@@ -10,12 +10,17 @@ export function Extra() {
 
         <h3 className="text-3xl font-bold mb-4 mt-12">TODO List</h3>
         <ul className="list-disc list-inside">
-          <li className="text-xl font-bold">Add README in PT</li>
-          <li className="text-xl font-bold">FIX theme not saving on page change/reload</li>
-          <li className="text-xl font-bold">Intermediate Hooks</li>
-          <li className="text-xl font-bold">React Router</li>
+          <li className="text-xl font-bold underline">Intermediate Hooks</li>
+          <li className="text-xl font-bold">Finalize Consolidated Content DropdownMenu</li>
+          <li className="text-xl font-bold">Work on changes to the MobileMenu</li>
+          <li className="text-xl font-bold">Extra Content about "Making Your Own Custom Hooks"</li>
+          <li className="text-xl font-bold">Testing</li>
+          <li className="text-xl font-bold line-through">React Router</li>
+          <li className="text-xl font-bold line-through">FIX theme not saving on page change/reload</li>
+          <li className="text-xl font-bold">Add README in PT (I'll do it someday..)</li>
           <li>Extra content about memoization</li>
-          <li>Advanced Hooks</li>
+          <li>Extra content about headless architecture (maybe)</li>
+          <li>Advanced Hooks (way too soon)</li>
         </ul>
     </section>
   )

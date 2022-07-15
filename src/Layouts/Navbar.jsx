@@ -1,12 +1,13 @@
 import { Menu } from "@headlessui/react";
 import { Sun, Moon } from 'phosphor-react'
 import { useState } from "react";
-import { DropdownMenu } from "./DropdownMenu";
-import { ThemeContext, themes } from './ThemeContext';
+
+import { ThemeContext, themes } from '../components/ThemeContext';
+import { ConsolidatedDropdown } from "./ConsolidatedDropdown";
+
 import Logo from '../img/Hoowks.png'
 import OrangeLogo from '../img/Hoowks-orange.png'
 import WhiteLogo from '../img/Hoowks-white.png'
-
 
 export function Navbar() {
   const theme = localStorage.getItem("theme")
@@ -53,7 +54,7 @@ export function Navbar() {
         <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
           <a href="/#intro">Intro</a>
         </li>
-        <DropdownMenu />
+        <ConsolidatedDropdown />
         <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
           <a href="/extra">Extra</a>
         </li>
