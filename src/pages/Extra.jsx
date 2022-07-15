@@ -19,7 +19,6 @@ export function Extra() {
           <li className="text-xl font-bold line-through">FIX theme not saving on page change/reload</li>
           <li className="text-xl font-bold">Add README in PT (I'll do it someday..)</li>
           <li>Extra content about memoization</li>
-          <li>Extra content about headless architecture (maybe)</li>
           <li>Advanced Hooks (way too soon)</li>
         </ul>
     </section>

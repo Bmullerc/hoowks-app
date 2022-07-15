@@ -26,7 +26,7 @@ export function BasicHooksDropmenu() {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className=" flex flex-col right-14 md:right-24 2xl:right-96 lg:right-80 top-56 md:top-8 mt-2 w-52 origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 divide-y divide-gray-100 rounded-sm border-none outline-none z-50">
+          className="flex flex-col mt-0 w-52 origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 divide-y divide-gray-100 rounded-sm border-none outline-none z-50">
           <Menu.Item>
             {({ active }) => (
               <a

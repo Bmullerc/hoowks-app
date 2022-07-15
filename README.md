@@ -53,7 +53,6 @@ This is all coming from a student, still grasping a lot of the concepts of front
 - Changed the theme changing Icons to use LocalStorage aswell.
 - Started working on consolidating the Hooks dropdowns into a single Content dropdown.
 
-
 ## Need to Improve
 
 - Page loading/changing seems rough at times, not sure what can be done.
