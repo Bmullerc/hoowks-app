@@ -1,13 +1,13 @@
 import { Menu, Transition } from "@headlessui/react"
 import { Fragment } from 'react'
-import { CaretDown, NotePencil, Code, Palette } from 'phosphor-react'
+import { CaretDown, PhoneOutgoing, IdentificationCard, NoteBlank, MagnifyingGlassMinus, Swap } from 'phosphor-react'
 
 
 export function InterHooksDropmenu() {
   return (
     <Menu>
       <Menu.Button
-        className="inline-flex items-center w-full justify-center hover:cursor-pointer hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in"
+        className="inline-flex items-center w-full h-10 justify-center hover:cursor-pointer hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in"
       >
         <a href="/interhooks/" className="whitespace-nowrap">Intermediate Hooks</a>
         <CaretDown
@@ -26,14 +26,14 @@ export function InterHooksDropmenu() {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className="flex flex-col mt-0 w-52 origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 divide-y divide-gray-100 rounded-sm border-none outline-none">
+          className="flex flex-col mt-0 w-52 origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 divide-y divide-gray-100 rounded-md border-none outline-none">
           <Menu.Item>
             {({ active }) => (
               <a
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
                 href="/interhooks/#callback"
               >
-                <NotePencil
+                <PhoneOutgoing
                   weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}         
                 />
@@ -47,7 +47,7 @@ export function InterHooksDropmenu() {
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
                 href="/interhooks/#id"
               >
-                <Palette
+                <IdentificationCard
                   weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
                 />
@@ -61,7 +61,7 @@ export function InterHooksDropmenu() {
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
                 href="/interhooks/#memo"
               >
-                <Code
+                <NoteBlank
                   weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
                 />
@@ -75,7 +75,7 @@ export function InterHooksDropmenu() {
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
                 href="/interhooks/#reducer"
               >
-                <Code
+                <MagnifyingGlassMinus
                   weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
                 />
@@ -89,7 +89,7 @@ export function InterHooksDropmenu() {
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
                 href="/interhooks/#ref"
               >
-                <Code
+                <Swap
                   weight="bold"
                   className={`${active ? 'inline-block h-4 w-4 mr-3 ml-2 text-orange-800 transition-colors duration-150 ease-out hover:ease-in' : 'inline-block h-4 w-4 mr-3 ml-2 text-orange-500'}`}
                 />

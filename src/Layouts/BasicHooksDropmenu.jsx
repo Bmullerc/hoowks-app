@@ -7,7 +7,7 @@ export function BasicHooksDropmenu() {
   return (
     <Menu>
       <Menu.Button
-        className="inline-flex items-center w-full justify-center hover:cursor-pointer hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in"
+        className="inline-flex items-center w-full h-9 justify-center hover:cursor-pointer hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in"
       >
         <a href="/basichooks/">Basic Hooks</a>
         <CaretDown
@@ -26,7 +26,7 @@ export function BasicHooksDropmenu() {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className="flex flex-col mt-0 w-52 origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 divide-y divide-gray-100 rounded-sm border-none outline-none z-50">
+          className="flex flex-col mt-0 w-52 origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 divide-y divide-gray-100 rounded-md border-none outline-none z-50">
           <Menu.Item>
             {({ active }) => (
               <a
