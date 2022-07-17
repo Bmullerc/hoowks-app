@@ -27,7 +27,7 @@ export function ConsolidatedDropdown() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Popover.Panel className="sm:absolute flex flex-col divide-y-2 divide-orange-300 justify-center right-14 md:right-32 2xl:right-[400px] lg:right-80 top-56 md:top-8 mt-2 w-52 h-fit origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 rounded-md border-none outline-none shadow-sm">
+        <Popover.Panel className="lg:absolute flex flex-col divide-y-2 divide-orange-300 justify-center right-14 md:right-32 2xl:right-[400px] lg:right-80 top-56 md:top-8 mt-2 w-52 h-fit origin-center md:origin-top-right dark:bg-zinc-800 bg-zinc-50 rounded-md border-none outline-none shadow-sm">
           <BasicHooksDropmenu />
           <InterHooksDropmenu />
         </Popover.Panel>

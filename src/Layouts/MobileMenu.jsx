@@ -2,10 +2,10 @@ import { Menu } from "@headlessui/react"
 import { Sun, Moon, List } from 'phosphor-react'
 import { useState } from "react";
 import { ThemeContext, themes } from "../components/ThemeContext";
-import { BasicHooksDropmenu } from "./BasicHooksDropmenu";
 import Logo from "../img/Hoowks.png"
 import OrangeLogo from '../img/Hoowks-orange.png'
 import WhiteLogo from '../img/Hoowks-white.png'
+import { ConsolidatedDropdown } from "./ConsolidatedDropdown";
 
 export function MobileMenu() {
   const theme = localStorage.getItem("theme")
@@ -56,7 +56,7 @@ export function MobileMenu() {
           <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
             <a href="/#intro">Intro</a>
           </li>
-          <BasicHooksDropmenu />
+          <ConsolidatedDropdown />
           <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
             <a href="/extra">Extra</a>
           </li>
