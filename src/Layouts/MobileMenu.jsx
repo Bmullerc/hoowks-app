@@ -26,7 +26,7 @@ export function MobileMenu() {
         <ul className="flex flex-col items-center gap-6 py-4">
           <a
             href="/#header"
-            className="flex justify-center items-center gap-2 text-3xl font-extrabold hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+            className="flex justify-center items-center gap-2 text-3xl font-extrabold active:text-orange-500 transition-colors duration-150 ease-out active:ease-in">
             Hoowks
 
             <ThemeContext.Consumer>
@@ -36,31 +36,31 @@ export function MobileMenu() {
                   <img
                     src={OrangeLogo}
                     alt="Hoowks Logo, a mix of a hook and an question mark"
-                    onMouseOver={e => e.currentTarget.src = WhiteLogo}
-                    onMouseOut={e => e.currentTarget.src = OrangeLogo}
-                    className="inline-block h-7 hover:scale-110 hover:-translate-y-1 duration-300" />
+                    onTouchStart={e => e.currentTarget.src = WhiteLogo}
+                    onTouchEnd={e => e.currentTarget.src = OrangeLogo}
+                    className="inline-block h-7 active:scale-110 active:-translate-y-1 duration-300" />
                   :
                   <img
                     src={OrangeLogo}
                     alt="Hoowks Logo, a mix of a hook and an question mark"
-                    onMouseOver={e => e.currentTarget.src = Logo}
-                    onMouseOut={e => e.currentTarget.src = OrangeLogo}
-                    className="inline-block h-7 hover:scale-110 hover:-translate-y-1 duration-300" />
+                    onTouchStart={e => e.currentTarget.src = Logo}
+                    onTouchEnd={e => e.currentTarget.src = OrangeLogo}
+                    className="inline-block h-7 active:scale-110 active:-translate-y-1 duration-300" />
               )}
             </ThemeContext.Consumer>
 
           </a>
-          <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in py-1 border-b-2 border-transparent active:border-orange-500">
             <a href="/#about">About</a>
           </li>
-          <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in py-1 border-b-2 border-transparent active:border-orange-500">
             <a href="/#intro">Intro</a>
           </li>
           <ConsolidatedDropdown />
-          <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in py-1 border-b-2 border-transparent active:border-orange-500">
             <a href="/extra">Extra</a>
           </li>
-          <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in py-1 border-b-2 border-transparent active:border-orange-500">
             <a href="#contact">Contact</a>
           </li>
           <ThemeContext.Consumer>
@@ -69,7 +69,7 @@ export function MobileMenu() {
                 ?
                 <Sun
                   weight="fill"
-                  className="h-6 w-6 text-zinc-50 hover:cursor-pointer -ml-3 transition-all duration-150 ease-out hover:ease-in hover:-rotate-90 inline-block"
+                  className="h-6 w-6 text-zinc-50 active:cursor-pointer -ml-3 transition-all duration-150 ease-out active:ease-in active:-rotate-90 inline-block"
                   onClick={() => {
                     setDarkMode(false);
                     changeTheme(themes.light)
@@ -78,7 +78,7 @@ export function MobileMenu() {
                 :
                 <Moon
                   weight="fill"
-                  className="h-5 w-6 text-zinc-800 hover:cursor-pointer -ml-3 transition-all duration-300 ease-out hover:ease-in -rotate-90 hover:rotate-3 inline-block"
+                  className="h-5 w-6 text-zinc-800 active:cursor-pointer -ml-3 transition-all duration-300 ease-out active:ease-in -rotate-90 active:rotate-3 inline-block"
                   onClick={() => {
                     setDarkMode(true);
                     changeTheme(themes.dark)

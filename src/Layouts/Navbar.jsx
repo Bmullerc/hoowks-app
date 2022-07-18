@@ -22,7 +22,7 @@ export function Navbar() {
     >
       <a
         href="/#header"
-        className="text-lg flex justify-center items-center gap-2 font-bold hover:text-orange-500 dark:text-zinc-50 hover:dark:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+        className="text-xl flex justify-center items-center gap-2 font-bold hover:text-orange-500 dark:text-zinc-50 hover:dark:text-orange-500 transition-all duration-150 ease-out hover:ease-in">
         Hoowks
 
         <ThemeContext.Consumer>
@@ -48,20 +48,20 @@ export function Navbar() {
       </a>
       <ul className="flex flex-row justify-center items-center gap-6">
 
-        <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in border-b-2 border-transparent hover:border-orange-500">
           <a href="/#about">About</a>
         </li>
-        <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in border-b-2 border-transparent hover:border-orange-500">
           <a href="/#intro">Intro</a>
         </li>
         <ConsolidatedDropdown />
-        <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in border-b-2 border-transparent hover:border-orange-500">
           <a href="/extra">Extra</a>
         </li>
-        <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in border-b-2 border-transparent hover:border-orange-500">
           <a href="#contact">Contact</a>
         </li>
-        <li className="hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in">
+        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in">
           <ThemeContext.Consumer>
             {({ changeTheme }) => (
               darkMode

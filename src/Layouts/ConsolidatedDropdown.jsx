@@ -9,7 +9,7 @@ export function ConsolidatedDropdown() {
   return (
     <Popover>
       <Popover.Button
-        className="inline-flex items-center w-full justify-center hover:cursor-pointer hover:text-orange-500 transition-colors duration-150 ease-out hover:ease-in"
+        className="inline-flex items-center py-1 w-full justify-center hover:cursor-pointer hover:text-orange-500 transition-all duration-150 ease-out hover:ease-in border-b-2 border-transparent hover:border-orange-500 active:border-orange-500 active:ease-in active:text-orange-500"
       >
         Content
         <CaretDown
