@@ -58,7 +58,7 @@ This is all coming from a student, still grasping a lot of the concepts of front
 - Page loading/changing seems rough at times, not sure what can be done.
 - Improve the Pages and Nav anchors related to them.
 - Tried to port to Typescript but could not figure out some of the problems and couldn't make the app work because of them.
-- Folder management
+- Folder management (maybe, need input)
 
 ## Next Steps
 

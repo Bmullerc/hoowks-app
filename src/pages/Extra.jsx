@@ -10,16 +10,18 @@ export function Extra() {
 
         <h3 className="text-3xl font-bold mb-4 mt-12">TODO List</h3>
         <ul className="list-disc list-inside">
+          <li className="text-xl font-bold underline">Extra content about memoization (useCallback / useMemo)</li>
           <li className="text-xl font-bold underline">Intermediate Hooks</li>
           <li className="text-xl font-bold">Finalize Consolidated Content DropdownMenu</li>
-          <li className="text-xl font-bold">Work on changes to the MobileMenu</li>
           <li className="text-xl font-bold">Extra Content about "Making Your Own Custom Hooks"</li>
-          <li className="text-xl font-bold">Testing</li>
           <li className="text-xl font-bold line-through">React Router</li>
           <li className="text-xl font-bold line-through">FIX theme not saving on page change/reload</li>
-          <li className="text-xl font-bold">Add README in PT (I'll do it someday..)</li>
-          <li>Extra content about memoization</li>
+          <li className="text-xl font-bold line-through">Work on changes to the MobileMenu</li>
+          <li>Change Previews after Int. Hooks are finished</li>
+          <li>Testing</li>
           <li>Advanced Hooks (way too soon)</li>
+          <li>Add README in PT (I'll do it someday..)</li>
+          <li>Bonus: underline and line-through are trash in Firefox compared to Chrome</li>
         </ul>
     </section>
   )
