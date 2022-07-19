@@ -10,7 +10,7 @@ import OrangeLogo from '../img/Hoowks-orange.png'
 import WhiteLogo from '../img/Hoowks-white.png'
 
 export function Navbar() {
-  const theme = localStorage.getItem("theme")
+  const theme = localStorage.getItem("@hoowks:theme")
   const isDark = (theme === "dark")
 
   const [darkMode, setDarkMode] = useState(isDark);

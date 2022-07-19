@@ -8,7 +8,7 @@ import WhiteLogo from '../img/Hoowks-white.png'
 import { ConsolidatedDropdown } from "./ConsolidatedDropdown";
 
 export function MobileMenu() {
-  const theme = localStorage.getItem("theme")
+  const theme = localStorage.getItem("@hoowks:theme")
   const isDark = (theme === "dark")
 
   const [darkMode, setDarkMode] = useState(isDark);
