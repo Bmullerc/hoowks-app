@@ -1,7 +1,7 @@
 import { Menu } from "@headlessui/react"
 import { Sun, Moon, List } from 'phosphor-react'
 import { useState } from "react";
-import { ThemeContext, themes } from "../components/ThemeContext";
+import { ThemeContext, themes } from "../contexts/ThemeContext";
 import Logo from "../img/Hoowks.png"
 import OrangeLogo from '../img/Hoowks-orange.png'
 import WhiteLogo from '../img/Hoowks-white.png'
@@ -50,17 +50,17 @@ export function MobileMenu() {
             </ThemeContext.Consumer>
 
           </a>
-          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in py-1 border-b-2 border-transparent active:border-orange-500">
+          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in">
             <a href="/#about">About</a>
           </li>
-          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in py-1 border-b-2 border-transparent active:border-orange-500">
+          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in">
             <a href="/#intro">Intro</a>
           </li>
           <ConsolidatedDropdown />
-          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in py-1 border-b-2 border-transparent active:border-orange-500">
+          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in">
             <a href="/extra">Extra</a>
           </li>
-          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in py-1 border-b-2 border-transparent active:border-orange-500">
+          <li className="active:text-orange-500 transition-all duration-150 ease-out active:ease-in">
             <a href="#contact">Contact</a>
           </li>
           <ThemeContext.Consumer>

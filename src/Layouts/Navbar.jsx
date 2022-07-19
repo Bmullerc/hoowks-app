@@ -2,7 +2,7 @@ import { Menu } from "@headlessui/react";
 import { Sun, Moon } from 'phosphor-react'
 import { useState } from "react";
 
-import { ThemeContext, themes } from '../components/ThemeContext';
+import { ThemeContext, themes } from '../contexts/ThemeContext';
 import { ConsolidatedDropdown } from "./ConsolidatedDropdown";
 
 import Logo from '../img/Hoowks.png'
@@ -48,20 +48,20 @@ export function Navbar() {
       </a>
       <ul className="flex flex-row justify-center items-center gap-6">
 
-        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in border-b-2 border-transparent hover:border-orange-500">
+        <li className="hover:text-orange-500 transition-all duration-150 ease-out hover:ease-in">
           <a href="/#about">About</a>
         </li>
-        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in border-b-2 border-transparent hover:border-orange-500">
+        <li className="hover:text-orange-500 transition-all duration-150 ease-out hover:ease-in">
           <a href="/#intro">Intro</a>
         </li>
         <ConsolidatedDropdown />
-        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in border-b-2 border-transparent hover:border-orange-500">
+        <li className="hover:text-orange-500 transition-all duration-150 ease-out hover:ease-in">
           <a href="/extra">Extra</a>
         </li>
-        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in border-b-2 border-transparent hover:border-orange-500">
+        <li className="hover:text-orange-500 transition-all duration-150 ease-out hover:ease-in">
           <a href="#contact">Contact</a>
         </li>
-        <li className="hover:text-orange-500 py-1 transition-all duration-150 ease-out hover:ease-in">
+        <li className="hover:text-orange-500 transition-all duration-150 ease-out hover:ease-in">
           <ThemeContext.Consumer>
             {({ changeTheme }) => (
               darkMode
