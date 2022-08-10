@@ -30,7 +30,7 @@ export function UseState() {
 
   return (
     <article id="state" className='border-b-2 border-orange-300 my-20'>
-      <h3 className="text-4xl font-bold mb-4">useState</h3>
+      <h3 className="flex items-baseline text-4xl font-bold mb-4"><span className="text-lg text-orange-500 mx-1">1●</span>useState</h3>
 
       <p>Is a Hook that lets you add React state to function components. To start using it, we call the <Code content="useState" /> hook inside our component.</p>
 

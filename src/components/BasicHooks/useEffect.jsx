@@ -29,7 +29,7 @@ export function UseEffect() {
 
   return (
     <article id="effect" className='border-b-2 border-orange-300 my-20'>
-      <h3 className="text-4xl font-bold mb-4">useEffect</h3>
+      <h3 className="flex items-baseline text-4xl font-bold mb-4"><span className="text-lg text-orange-500 mx-1">2●</span>useEffect</h3>
 
       <p>The Effect Hook lets you perform side effects in function components. It accepts two arguments, the first is a function and the second argument is a dependency, which is optional.</p>
 
@@ -159,7 +159,7 @@ function Timer() {
       <p>React performs the cleanup when the component unmounts. However, as we learned earlier, effects run for every render and not just once. This is why React also cleans up effects from the previous render before running the effects next time.</p>
 
       <HotTip
-        text={<p className="dark:text-zinc-700">Unmounting is a phase in the lifecycle when a component is removed from the DOM, or unmounted as React likes to call it. We talk more about it <a href='#lifecycle' className='text-orange-600 hover:text-zinc-100 rounded-sm'>here</a>.</p>}
+        text={<p className="dark:text-zinc-700">Unmounting is a phase in the lifecycle when a component is removed from the DOM, or unmounted as React likes to call it. We talk more about it <a href='/extra/#lifecycle' className='text-orange-600 hover:text-zinc-100 rounded-sm'>here</a>.</p>}
       />
 
       <h3 className="text-3xl font-bold mt-20 mb-4" id="effect-dependency">Using Async and Await</h3>
