@@ -16,6 +16,16 @@ export function Extra() {
         - Hooks Changed (State, Context, Reducer)
         - Props Changed
         - Parent Rerender 
+
+        Render Order:
+        1 Recreate component HTML interface (on memory)
+        2 Compare the new HTML with the older
+        3 IF anything changed, rewrite the HTML Onscreen
+
+        Memo (Only use for Complex Components):
+        0 Hooks changed, Props changed (both deep comparison - can be more intensive than just allowing the component to rerender)
+        0.1 Compare versions
+        0.2 IF something changed, allow rerender, then back to normal Render order, else No change
       `</p>
 
       <h3 className="text-3xl font-bold mb-4 mt-12">TODO List</h3>
