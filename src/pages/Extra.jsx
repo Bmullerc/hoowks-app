@@ -12,6 +12,12 @@ export function Extra() {
       <Memoization />
       <Hydration />
 
+      <p>Temp: Why a component renders?
+        - Hooks Changed (State, Context, Reducer)
+        - Props Changed
+        - Parent Rerender 
+      `</p>
+
       <h3 className="text-3xl font-bold mb-4 mt-12">TODO List</h3>
       <ul className="list-disc list-inside">
         <li className="text-xl font-bold underline">Extra content about memoization (useCallback / useMemo)</li>
