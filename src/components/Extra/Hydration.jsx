@@ -1,5 +1,3 @@
-import { Code, PreCode } from "../Snippets/RepeatedCode";
-
 export function Hydration() {
   return (
     <article className="mt-20 pb-10 border-b-2 border-zinc-300">
