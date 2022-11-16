@@ -32,41 +32,41 @@ export function UseState() {
     <article id="state" className='border-b-2 border-orange-300 my-20'>
       <h3 className="flex items-baseline text-4xl font-bold mb-4"><span className="text-lg text-orange-500 mx-1">1●</span>useState</h3>
 
-      <p>Is a Hook that lets you add React state to function components. To start using it, we call the <Code content="useState" /> hook inside our component.</p>
+      <p>Is a Hook that lets you add React state to function components. To start using it, we call the <Code children="useState" /> hook inside our component.</p>
 
       <PreCode
-        code={`import { useState } from 'react';
+        children={`import { useState } from 'react';
 
 function Example() {
   // Declare a new state variable, which we'll call "count"
   const [count, setCount] = useState(0);`} />
 
       <h3 className="text-xl font-bold mt-12 mb-4">So, what does it do?</h3>
-      <p>In a <Code content="useState" /> hook, we declare a "state variable", in this case <Code content="count" />, and use it to "preserve" some values between the function calls. Normally, variables "disappear" when the function exits, but state variables are preserved by React.</p>
+      <p>In a <Code children="useState" /> hook, we declare a "state variable", in this case <Code children="count" />, and use it to "preserve" some values between the function calls. Normally, variables "disappear" when the function exits, but state variables are preserved by React.</p>
 
-      <PreCode code={`const [count, ...] = ...`} />
+      <PreCode children={`const [count, ...] = ...`} />
 
       <h3 className="text-xl font-bold mt-12 my-4">How do we use it?</h3>
-      <p>We need to pass an argument that will be the initial state for our variable. In our example we gave the initial state the value of <Code content="0" /> to start our counter. It then returns a pair of values: the current state <Code content="count" />, and a function that updates it <Code content="setCount" />. This is why we wrote <Code content="const [count, setCount] = ... " />.</p>
+      <p>We need to pass an argument that will be the initial state for our variable. In our example we gave the initial state the value of <Code children="0" /> to start our counter. It then returns a pair of values: the current state <Code children="count" />, and a function that updates it <Code children="setCount" />. This is why we wrote <Code children="const [count, setCount] = ... " />.</p>
 
-      <PreCode code={`const [count, setCount] = useState(0)`} />
+      <PreCode children={`const [count, setCount] = useState(0)`} />
 
       <h3 className="text-3xl font-bold mt-20 mb-4">Reading State</h3>
-      <p>When we want to display the current count in a function, we can use <Code content="count" /> directly: </p>
+      <p>When we want to display the current count in a function, we can use <Code children="count" /> directly: </p>
 
-      <PreCode code={`<p>You clicked {count} times</p>`} />
+      <PreCode children={`<p>You clicked {count} times</p>`} />
 
       <h3 className="text-3xl font-bold mt-20 mb-4">Updating State</h3>
-      <p>We use the function provided <Code content="setCount" /> to update the <Code content="count" /> variable:</p>
+      <p>We use the function provided <Code children="setCount" /> to update the <Code children="count" /> variable:</p>
 
-      <PreCode code={`<button onClick={() => setCount(prevState => prevState + 1)}>
+      <PreCode children={`<button onClick={() => setCount(prevState => prevState + 1)}>
     Click me
 </button>`} />
 
-      <p className='my-8'>In the example above, we used the <Code content="prevState" /> as an argument in the <Code content="setCount" /> function to make sure that React will update the new state based on the previous state value. We could also create a new function and call it on the onClick button event for clarity.</p>
+      <p className='my-8'>In the example above, we used the <Code children="prevState" /> as an argument in the <Code children="setCount" /> function to make sure that React will update the new state based on the previous state value. We could also create a new function and call it on the onClick button event for clarity.</p>
 
       <PreCode
-        code={`function handleAddClick() {
+        children={`function handleAddClick() {
   setCount(prevState => prevState + 1)
 }
 
@@ -74,13 +74,13 @@ function Example() {
     Click me
 </button>`} />
 
-      <HotTip text={<p className="dark:text-zinc-700">When using functions inside of events like the one we showed above, be sure to not include the <Code content="()" /> after the function name to avoid a loop and possible headache trying to find the problem later.</p>} />
+      <HotTip children={<p className="dark:text-zinc-700">When using functions inside of events like the one we showed above, be sure to not include the <Code children="()" /> after the function name to avoid a loop and possible headache trying to find the problem later.</p>} />
 
       <h3 className="text-3xl font-bold mt-20 mb-4">Recap</h3>
       <p className='font-medium'>Let's check what we learned so far line by line: </p>
 
       <PreCode
-        code={` 1:  import { useState } from 'react';
+        children={` 1:  import { useState } from 'react';
  2:
  3:  function Example() {
  4:    const [count, setCount] = useState(0);
@@ -100,13 +100,13 @@ function Example() {
 18:  }`} />
 
       <ul className='list-disc list-inside flex flex-col gap-2'>
-        <li><strong>Line 1:</strong> We import the <Code content="useState" /> Hook from React. It lets us keep local state in a function component.</li>
+        <li><strong>Line 1:</strong> We import the <Code children="useState" /> Hook from React. It lets us keep local state in a function component.</li>
 
-        <li><strong>Line 4:</strong> Inside the Example component, we declare a new state variable by calling the <Code content="useState" /> Hook. It returns a pair of values, to which we give names. We're calling our variable <Code content="count" /> because it holds the number of button clicks. We initialize it to zero by passing <Code content="0" /> as the only <Code content="useState" /> argument. The second returned item is itself a function. It lets us update the <Code content="count" /> so we'll name it <Code content="setCount" />.</li>
+        <li><strong>Line 4:</strong> Inside the Example component, we declare a new state variable by calling the <Code children="useState" /> Hook. It returns a pair of values, to which we give names. We're calling our variable <Code children="count" /> because it holds the number of button clicks. We initialize it to zero by passing <Code children="0" /> as the only <Code children="useState" /> argument. The second returned item is itself a function. It lets us update the <Code children="count" /> so we'll name it <Code children="setCount" />.</li>
 
-        <li><strong>Line 6:</strong> This is where we create the <Code content="handleAddClick" /> function to put inside our button click event. We use the previous state <Code content="prevState" /> as an argument for the <Code content="setCount" /> function to make sure React uses the previous state value to update our variable.</li>
+        <li><strong>Line 6:</strong> This is where we create the <Code children="handleAddClick" /> function to put inside our button click event. We use the previous state <Code children="prevState" /> as an argument for the <Code children="setCount" /> function to make sure React uses the previous state value to update our variable.</li>
 
-        <li><strong>Line 12:</strong> When the user clicks the button, we call our <Code content="handleAddClick" /> function into action. React will then re-render the Example component, passing the new <Code content="count" /> value to it.</li>
+        <li><strong>Line 12:</strong> When the user clicks the button, we call our <Code children="handleAddClick" /> function into action. React will then re-render the Example component, passing the new <Code children="count" /> value to it.</li>
       </ul>
 
       <h3 className="text-3xl font-bold mt-20">Some examples of what we learned:</h3>
@@ -132,7 +132,7 @@ function Example() {
       </div>
 
       <PreCode
-      code={`function ExampleCounter() {
+      children={`function ExampleCounter() {
   const [count, setCount] = useState(0);
 
   function handleAddClick() {
@@ -170,7 +170,7 @@ function Example() {
       </div>
 
       <PreCode
-      code={`function ExampleFavorite() {
+      children={`function ExampleFavorite() {
   const favorite, setFavorite] = useState(false);
 
   function handleFavorite() {
@@ -206,7 +206,7 @@ function Example() {
       </div>
 
       <PreCode
-      code={`function ExampleLikes() {
+      children={`function ExampleLikes() {
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
 

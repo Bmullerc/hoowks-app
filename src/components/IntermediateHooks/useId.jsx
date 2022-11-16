@@ -5,17 +5,17 @@ export function UseId() {
     <article id="id" className='border-b-2 border-orange-300 my-20 pb-20'>
 
       <h3 className="flex items-baseline text-4xl font-bold mb-4"><span className="text-lg text-orange-500 mx-1">2●</span>useId</h3>
-      <PreCode code={`const id = useId();`} />
+      <PreCode children={`const id = useId();`} />
 
       <p>This hook is for generating unique IDs that are stable across the server and client, while avoiding hydration mismatches.</p>
 
-      <p className="mt-4"><span className="font-bold">Important</span>, <Code content={"useId"} /> should <span className="font-bold">not</span> be used to generate keys in a list.</p>
+      <p className="mt-4"><span className="font-bold">Important</span>, <Code children={"useId"} /> should <span className="font-bold">not</span> be used to generate keys in a list.</p>
 
-      <HotTip text={<p className="dark:text-zinc-700">Hydration is a technique used that is similar to rendering, but instead of having an empty DOM to render all of our react components into, we have a DOM that has already been built, with all our components rendered as HTML. Learn more about it <a href='/extra/#hydration' className='text-orange-600 hover:text-zinc-100 rounded-sm'>here</a>.</p>} />
+      <HotTip children={<p className="dark:text-zinc-700">Hydration is a technique used that is similar to rendering, but instead of having an empty DOM to render all of our react components into, we have a DOM that has already been built, with all our components rendered as HTML. Learn more about it <a href='/extra/#hydration' className='text-orange-600 hover:text-zinc-100 rounded-sm'>here</a>.</p>} />
 
       <p className="mt-8">For a basic example, pass the id directly to the elements that need it:</p>
 
-      <PreCode code={`function Checkbox() {
+      <PreCode>{`function Checkbox() {
   const id = useId();
   return (
     <>
@@ -23,11 +23,12 @@ export function UseId() {
       <input id={id} type="checkbox" name="taters"/>
     </>
   );
-};`} />
+};`}
+      </PreCode>
 
       <p className="mt-8">For multiple IDs in the same component, append a suffix using the same id:</p>
 
-      <PreCode code={`function NameFields() {
+      <PreCode children={`function NameFields() {
   const id = useId();
   return (
     <div>
