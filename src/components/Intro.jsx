@@ -16,7 +16,7 @@ export function Intro() {
 
       <h2 id="intro" className="lg:text-4xl text-3xl font-bold mt-16">Hook Rules</h2>
       <h3 id="intro" className="lg:text-2xl text-xl font-bold mt-12">Only Call Hooks at the Top Level</h3>
-      <p className="mt-4"><strong className="text-orange-500">Don't call Hooks inside loops, conditions, or nested functions.</strong> Instead, always use Hooks at the top level of your React function, before any early returns. By following this rule, you ensure that Hooks are called in the same order each time a component renders. That's what allows React to correctly preserve the state of Hooks between multiple <Code content="useState" /> and <Code content="useEffect" /> calls. </p>
+      <p className="mt-4"><strong className="text-orange-500">Don't call Hooks inside loops, conditions, or nested functions.</strong> Instead, always use Hooks at the top level of your React function, before any early returns. By following this rule, you ensure that Hooks are called in the same order each time a component renders. That's what allows React to correctly preserve the state of Hooks between multiple <Code children="useState" /> and <Code children="useEffect" /> calls. </p>
 
       <h3 id="intro" className="lg:text-2xl text-xl font-bold mt-12">Only Call Hooks from React Functions</h3>
       <p className="mt-6"><strong className="text-orange-500">Don't call Hooks from regular JavaScript functions.</strong> Instead, you can:</p>
