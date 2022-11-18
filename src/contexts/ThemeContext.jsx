@@ -5,9 +5,7 @@ export const themes = {
   light: "",
 };
 
-export const ThemeContext = createContext({
-  changeTheme: () => { },
-});
+export const ThemeContext = createContext();
 
 export function ThemeContextWrapper(props) {
   const [theme, setTheme] = useState(localStorage.getItem("@hoowks:theme"))
@@ -27,7 +25,7 @@ export function ThemeContextWrapper(props) {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ changeTheme: changeTheme }}>
+    <ThemeContext.Provider value={{ changeTheme }}>
       {props.children}
     </ThemeContext.Provider>
   );
