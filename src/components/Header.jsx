@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header id="header" className="flex justify-center items-center h-screen dark:bg-zinc-700 text-zinc-700 bg-zinc-200 tracking-tight dark:bg-gradient-to-b from-current to-orange-400 bg-gradient-to-t">
       <motion.div
-        initial={{ scale: .3, rotate: 15 }}
+        initial={{ scale: .2, rotate: 15 }}
         whileInView={{ scale: 1, rotate: 0, transition: { delay: .3, duration: .5 } }}
         className="text-center text-zinc-800">
         <motion.img
