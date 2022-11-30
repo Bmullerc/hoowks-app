@@ -11,7 +11,7 @@ export function Header() {
         <motion.img
           initial={{ scale: .7, }}
           whileInView={{ scale: 1.5, rotate: 15, x: 10, y: -30, transition: { delay: .8, duration: .7 } }}
-          whileHover={{ rotate: 210 }}
+          whileHover={{ rotate: 210, transition: { delay: .2, duration: .3 } }}
           whileTap={{ scale: .7, rotate: 210 }}
           src={Logo}
           alt="Hoowks Logo, a mix of a hook and an question mark"
@@ -20,24 +20,21 @@ export function Header() {
         <div className="font-bold">
           <motion.h1
             animate={{ scale: 1.3, transition: { delay: .8, duration: .7 } }}
-            className="lg:text-7xl text-6xl ">React</motion.h1><br></br>
+            className="lg:text-7xl text-6xl mt-4">React</motion.h1><br></br>
           <motion.span
             initial={{ scale: .8 }}
-            whileInView={{ scale: 1, y: -10, transition: { delay: .8, duration: .7 } }}
-            whileHover={{ scale: 1.05, y: 0, transition: { duration: .7 } }}
+            whileInView={{ scale: 1, transition: { delay: .8, duration: .7 } }}
             whileTap={{ scale: 1.1, transition: { duration: .5 } }}
-            className="text-orange-400 py-1 tracking-wider uppercase lg:text-8xl text-7xl inline-block drop-shadow-lg">
+            className="text-orange-400 tracking-wider uppercase lg:text-8xl text-7xl inline-block drop-shadow-lg -mt-4">
             Hooks
           </motion.span>
           <motion.p
-            animate={{ scale: .9, y: -10, transition: { delay: .8, duration: .7 } }}
-            className=" lg:text-4xl text-3xl inline-block">
+            className=" lg:text-5xl text-3xl inline-block">
             and
           </motion.p>
           <motion.span
             initial={{ scale: .8 }}
             whileInView={{ scale: 1, transition: { delay: .8, duration: .7 } }}
-            whileHover={{ scale: 1.1, transition: { duration: .5 } }}
             whileTap={{ scale: 1.1, transition: { duration: .5 } }}
             className="text-orange-300 pl-4 tracking-tighter uppercase lg:text-6xl text-6xl inline-block drop-shadow-md">
             How
@@ -45,27 +42,24 @@ export function Header() {
         </div>
         <div className="lg:text-5xl text-4xl font-bold">
           <motion.p
-            animate={{ scale: .9, y: -10, transition: { delay: .8, duration: .7 } }}
-            className=" lg:text-4xl text-3xl inline-block">
+            className=" lg:text-5xl text-3xl inline-block">
             to
           </motion.p>
 
           <motion.span
             initial={{ scale: .8 }}
             whileInView={{ scale: 1, transition: { delay: .8, duration: .7 } }}
-            whileHover={{ scale: 1.1, transition: { duration: .5 } }}
             whileTap={{ scale: 1.1, transition: { duration: .5 } }} className="inline-block px-4 py-1 text-orange-200 tracking-wider font-bold uppercase lg:text-6xl text-5xl drop-shadow-md">
             Use
           </motion.span>
           <motion.p
-            animate={{ scale: .9, y: -10, transition: { delay: .8, duration: .7 } }}
-            className=" lg:text-4xl text-3xl inline-block">
+            className=" lg:text-5xl text-3xl inline-block">
             them.
           </motion.p>
         </div>
         <motion.h4
           initial={{ scale: .8 }}
-          whileInView={{ scale: .9, transition: { delay: .8, duration: .7 } }}
+          whileInView={{ scale: 1, transition: { delay: .8, duration: .7 } }}
           className="mt-2 font-normal text-orange-100 drop-shadow-sm tracking-wide">
           A more practical approach
         </motion.h4>
