@@ -59,7 +59,7 @@ export function InterHooksDropmenu() {
             {({ active }) => (
               <a
                 className={`${active ? 'bg-orange-500 text-zinc-50 rounded-sm inline-flex items-center h-8 transition-colors duration-75 ease-out hover:ease-in' : 'inline-flex items-center h-8'}`}
-                href="/interhooks/#memo"
+                href="/interhooks/#usememo"
               >
                 <NoteBlank
                   weight="bold"
