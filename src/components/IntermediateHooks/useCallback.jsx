@@ -5,11 +5,13 @@ export function UseCallback() {
     <article id="callback" className='border-b-2 border-orange-300 my-20 pb-20'>
 
       <h3 className="flex items-baseline text-4xl font-bold mb-4"><span className="text-lg text-orange-500 mx-1">1●</span>useCallback</h3>
-      <p>The <Code>useCallback</Code> Hook returns a memoized callback function.</p>
+      <p>The <Code>useCallback</Code> hook returns a memoized callback function.</p>
 
       <PreCode>
         const cachedFunction = useCallback(function, dependencies)
       </PreCode>
+
+      <p>You </p>
 
       <HotTip children={<p className="dark:text-zinc-700">Think of <Code>memoization</Code> as caching a value so that it does not need to be recalculated. You can learn more about memoization <a href="/extra/#memo" className='text-orange-600 hover:text-zinc-100 rounded-sm'>here</a>.</p>} />
 
@@ -25,9 +27,11 @@ export function UseCallback() {
         <li>Optimizing a custom Hook</li>
       </ul>
 
-      <h3 className="text-xl font-bold mt-12 mb-4">asd</h3>
-
+      <p>In the example bellow, we prevent a component from re-rendering unless its props have changed.</p>
       
+      <PreCode>
+
+      </PreCode>
 
       <HotTip children={<p classname="dark:text-zinc-700">The <Code>useCallback</Code> and <Code>useMemo</Code> Hooks are similar. The main difference is that <Code>useMemo</Code> returns a memoized value and <Code>useCallback</Code> returns a memoized function. You can learn more about <a href="#usememo" className='text-orange-600 hover:text-zinc-100 rounded-sm'>here</a>.</p>} />
 
